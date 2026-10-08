@@ -1,0 +1,347 @@
+/* ================================
+   ADMIN SIGNUP PAGE
+================================ */
+
+.admin-signup-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f3ee;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+
+/* ================================
+   LEFT SIDE
+================================ */
+
+.admin-signup-left {
+  width: 42%;
+  min-height: 100vh;
+  background: #241b18;
+  color: #f5eee7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 55px 60px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-signup-brand {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.admin-signup-brand span {
+  color: #c89b6d;
+}
+
+.admin-signup-decoration {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 28px;
+  font-size: 42px;
+  color: #c89b6d;
+  opacity: 0.75;
+}
+
+.admin-signup-decoration span:nth-child(2) {
+  font-size: 62px;
+}
+
+.admin-signup-quote {
+  max-width: 380px;
+  margin-bottom: 30px;
+}
+
+.admin-signup-quote p {
+  font-size: 28px;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 18px;
+  color: #f4e9de;
+}
+
+.admin-signup-quote span {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #c89b6d;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.admin-signup-right {
+  width: 58%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #f7f3ee;
+}
+
+.admin-signup-box {
+  width: 100%;
+  max-width: 520px;
+}
+
+
+/* ================================
+   BACK BUTTON
+================================ */
+
+.admin-signup-back-button {
+  border: none;
+  background: transparent;
+  color: #6d5a4e;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 35px;
+  transition: 0.3s ease;
+}
+
+.admin-signup-back-button:hover {
+  color: #a2764f;
+  transform: translateX(-4px);
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.admin-signup-heading > p:first-child {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #a2764f;
+  margin-bottom: 12px;
+}
+
+.admin-signup-heading h1 {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 0;
+  color: #2c211c;
+  font-weight: 500;
+}
+
+.admin-signup-heading h1 span {
+  color: #a2764f;
+  font-style: italic;
+}
+
+.admin-signup-line {
+  width: 65px;
+  height: 2px;
+  background: #c89b6d;
+  margin: 22px 0;
+}
+
+.admin-signup-description {
+  font-family: Arial, sans-serif;
+  color: #806f63;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.admin-signup-form-group {
+  margin-bottom: 18px;
+}
+
+.admin-signup-form-group label {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #5c4a40;
+  margin-bottom: 8px;
+}
+
+.admin-signup-form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 15px;
+  border: 1px solid #d7c9bd;
+  border-radius: 3px;
+  background: #fffdfa;
+  color: #2c211c;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.admin-signup-form-group input::placeholder {
+  color: #aaa09a;
+}
+
+.admin-signup-form-group input:focus {
+  border-color: #a2764f;
+  box-shadow: 0 0 0 3px rgba(162, 118, 79, 0.08);
+}
+
+
+/* ================================
+   SHOW PASSWORD
+================================ */
+
+.admin-show-password {
+  margin: -5px 0 18px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #76665d;
+}
+
+.admin-show-password label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.admin-show-password input {
+  cursor: pointer;
+}
+
+
+/* ================================
+   ERROR / SUCCESS
+================================ */
+
+.admin-signup-error {
+  padding: 11px 13px;
+  margin-bottom: 15px;
+  background: #f8e5e3;
+  border-left: 3px solid #b94a48;
+  color: #9a3836;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.admin-signup-success {
+  padding: 11px 13px;
+  margin-bottom: 15px;
+  background: #e8f2e8;
+  border-left: 3px solid #56845a;
+  color: #3d6b42;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+
+/* ================================
+   SIGNUP BUTTON
+================================ */
+
+.admin-signup-button {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 20px;
+  background: #2c211c;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-signup-button:hover:not(:disabled) {
+  background: #a2764f;
+  transform: translateY(-1px);
+}
+
+.admin-signup-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* ================================
+   LOGIN LINK
+================================ */
+
+.admin-signup-login-link {
+  text-align: center;
+  margin-top: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-signup-login-link p {
+  display: inline;
+  color: #81746d;
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.admin-signup-login-link button {
+  border: none;
+  background: transparent;
+  color: #a2764f;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.admin-signup-login-link button:hover {
+  text-decoration: underline;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .admin-signup-page {
+    flex-direction: column;
+  }
+
+  .admin-signup-left {
+    width: 100%;
+    min-height: 260px;
+    padding: 35px;
+  }
+
+  .admin-signup-right {
+    width: 100%;
+    min-height: auto;
+    padding: 35px 25px;
+  }
+
+  .admin-signup-decoration {
+    display: none;
+  }
+
+  .admin-signup-quote {
+    margin-top: 50px;
+  }
+
+  .admin-signup-quote p {
+    font-size: 21px;
+  }
+
+  .admin-signup-heading h1 {
+    font-size: 38px;
+  }
+}

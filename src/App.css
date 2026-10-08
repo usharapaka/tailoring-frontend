@@ -1,0 +1,877 @@
+/* =====================================================
+   STITCHORA — GRAND WOMEN'S FASHION HOMEPAGE
+===================================================== */
+
+:root {
+  --espresso: #211814;
+  --dark-burgundy: #4b1826;
+  --burgundy: #7b2638;
+  --rose: #b85c72;
+  --gold: #c9a45c;
+  --gold-light: #e2c98e;
+  --ivory: #fff9f3;
+  --cream: #f7eee7;
+  --blush: #f1dadd;
+  --muted: #756b65;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--ivory);
+  color: var(--espresso);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  height: 82px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  background: rgba(25, 14, 16, 0.82);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(226, 201, 142, 0.22);
+
+  color: white;
+}
+
+.brand {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.brand span {
+  color: var(--gold);
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navbar nav a {
+  color: #f3e9e4;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--gold-light);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 82px;
+
+  padding: 11px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: transparent;
+
+  color: white;
+
+  font-size: 12px;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--gold);
+}
+
+.book-btn {
+  min-width: 150px;
+
+  padding: 12px 20px;
+
+  border: 1px solid var(--gold);
+  background: var(--gold);
+
+  color: var(--espresso);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.book-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO — CINEMATIC FASHION BACKGROUND
+===================================================== */
+
+.hero {
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 8% 80px;
+
+  color: white;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(25, 13, 16, 0.94) 0%,
+      rgba(45, 18, 28, 0.82) 32%,
+      rgba(45, 18, 28, 0.42) 62%,
+      rgba(25, 13, 16, 0.72) 100%
+    ),
+    url("./assets/hero.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 10, 12, 0.25),
+      transparent 45%,
+      rgba(20, 10, 12, 0.55)
+    );
+
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(201, 164, 92, 0.16),
+      transparent 30%
+    );
+
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: var(--gold-light);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(65px, 8vw, 108px);
+
+  line-height: 0.9;
+
+  font-weight: 400;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 32px;
+}
+
+.hero h1 span {
+  color: var(--gold-light);
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 560px;
+
+  color: #eee2dd;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  margin-bottom: 34px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gold-btn {
+  border: 1px solid var(--gold);
+
+  background: var(--gold);
+
+  color: var(--espresso);
+
+  padding: 15px 24px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.gold-btn span {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.gold-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-3px);
+}
+
+.discover-btn {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.48);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: white;
+
+  padding: 15px 24px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.discover-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--gold-light);
+}
+
+.hero-fashion-types {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 55px;
+
+  color: #eadfd9;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hero-fashion-types i {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero-side-text {
+  position: absolute;
+
+  right: 6%;
+  bottom: 55px;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: right;
+
+  color: var(--gold-light);
+}
+
+.hero-side-text span {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hero-side-text strong {
+  font-family: Georgia, serif;
+
+  font-size: 38px;
+
+  font-weight: 400;
+}
+
+.hero-side-text small {
+  color: #c9bab4;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience-section {
+  position: relative;
+
+  padding: 105px 10%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 249, 243, 0.97),
+      rgba(247, 238, 231, 0.96)
+    );
+
+  text-align: center;
+}
+
+.experience-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  color: var(--burgundy);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
+}
+
+.experience-content h2 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  margin-bottom: 25px;
+}
+
+.experience-content h2 em {
+  color: var(--burgundy);
+}
+
+.experience-description {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+.experience-highlight {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px 24px;
+
+  margin-top: 40px;
+
+  color: var(--burgundy);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.experience-highlight span {
+  position: relative;
+}
+
+.experience-highlight span:not(:last-child)::after {
+  content: "•";
+
+  position: absolute;
+
+  right: -16px;
+
+  color: var(--gold);
+}
+
+
+/* =====================================================
+   PROCESS
+===================================================== */
+
+.process {
+  padding: 105px 8%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark-burgundy),
+      #32151f
+    );
+
+  color: white;
+}
+
+.process-heading {
+  text-align: center;
+
+  margin-bottom: 65px;
+}
+
+.process-heading .section-label {
+  color: var(--gold-light);
+}
+
+.process-heading h2 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(40px, 5vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.process-heading h2 span {
+  color: var(--gold-light);
+
+  font-style: italic;
+
+  margin-left: 10px;
+}
+
+.process-steps {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+}
+
+.step {
+  max-width: 210px;
+
+  text-align: center;
+}
+
+.step > span {
+  color: var(--gold);
+
+  font-family: Georgia, serif;
+
+  font-size: 25px;
+}
+
+.step h3 {
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+
+  font-weight: 400;
+
+  margin: 17px 0 12px;
+}
+
+.step p {
+  color: #d7c8c3;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.step-line {
+  width: 75px;
+
+  height: 1px;
+
+  margin-top: 17px;
+
+  background: rgba(201, 164, 92, 0.55);
+}
+
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.final-cta {
+  padding: 95px 10%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  background:
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(184, 92, 114, 0.2),
+      transparent 30%
+    ),
+    var(--blush);
+}
+
+.final-cta h2 {
+  font-family: Georgia, serif;
+
+  font-size: clamp(42px, 5vw, 58px);
+
+  line-height: 1.05;
+
+  font-weight: 400;
+
+  margin-bottom: 20px;
+}
+
+.final-cta h2 span {
+  color: var(--burgundy);
+
+  font-style: italic;
+}
+
+.final-cta > div > p:last-child {
+  color: var(--muted);
+
+  max-width: 560px;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+.final-cta .gold-btn {
+  background: var(--burgundy);
+
+  color: white;
+
+  white-space: nowrap;
+}
+
+.final-cta .gold-btn:hover {
+  background: var(--dark-burgundy);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+  background: var(--espresso);
+
+  color: white;
+
+  padding: 60px 8% 25px;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+  gap: 40px;
+}
+
+.footer-brand p {
+  color: #a99d97;
+
+  font-size: 12px;
+
+  margin-top: 15px;
+
+  line-height: 1.6;
+}
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.footer-column h4 {
+  color: var(--gold-light);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 7px;
+}
+
+.footer-column a,
+.footer-column p,
+.footer-column button {
+  color: #a99d97;
+
+  font-size: 12px;
+
+  text-align: left;
+
+  background: transparent;
+
+  border: none;
+
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.footer-column a:hover,
+.footer-column button:hover {
+  color: var(--gold-light);
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+
+  padding-top: 22px;
+
+  margin-top: 20px;
+
+  border-top: 1px solid #3c302a;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #796e68;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 120px 7% 75px;
+
+    background-position: center;
+  }
+
+  .hero-side-text {
+    display: none;
+  }
+
+  .process-steps {
+    flex-wrap: wrap;
+
+    gap: 45px 25px;
+  }
+
+  .step-line {
+    width: 45px;
+  }
+
+  .final-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 72px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .nav-buttons .login-btn {
+    display: none;
+  }
+
+  .book-btn {
+    min-width: 120px;
+
+    padding: 10px 13px;
+
+    font-size: 10px;
+  }
+
+  .hero {
+    min-height: 100vh;
+
+    padding: 110px 6% 60px;
+
+    background-position: 60% center;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .gold-btn,
+  .discover-btn {
+    justify-content: center;
+
+    text-align: center;
+  }
+
+  .hero-fashion-types {
+    gap: 9px;
+
+    margin-top: 38px;
+
+    font-size: 8px;
+  }
+
+  .experience-section,
+  .process,
+  .final-cta {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .experience-content h2,
+  .process-heading h2,
+  .final-cta h2 {
+    font-size: 38px;
+  }
+
+  .process-steps {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 28px;
+  }
+
+  .step-line {
+    width: 1px;
+
+    height: 35px;
+
+    margin: 0;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+}

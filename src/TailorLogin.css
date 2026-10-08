@@ -1,0 +1,233 @@
+.tailor-login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(33, 24, 20, 0.97),
+      rgba(75, 24, 38, 0.94)
+    );
+
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.tailor-login-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 42px;
+  box-sizing: border-box;
+
+  background: rgba(255, 249, 243, 0.98);
+  border: 1px solid #c9a45c;
+  border-radius: 4px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* BRAND */
+
+.tailor-login-brand {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.tailor-logo {
+  color: #4b1826;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.tailor-login-brand p {
+  margin: 7px 0 0;
+  color: #9a7a58;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+}
+
+/* HEADING */
+
+.tailor-login-heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.tailor-login-heading h1 {
+  margin: 0;
+  color: #211814;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.tailor-login-heading p {
+  margin: 8px 0 0;
+  color: #806f66;
+  font-size: 13px;
+}
+
+/* SIGN IN / SIGN UP */
+
+.tailor-mode-switch {
+  display: flex;
+  border: 1px solid #d8c5b8;
+  margin-bottom: 24px;
+}
+
+.tailor-mode-switch button {
+  width: 50%;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: #806f66;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: 0.25s ease;
+}
+
+.tailor-mode-switch button.active {
+  background: #7b2638;
+  color: #fff9f3;
+}
+
+/* FORM */
+
+.tailor-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tailor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.tailor-field label {
+  color: #4b1826;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.tailor-field input {
+  width: 100%;
+  height: 44px;
+  padding: 0 13px;
+  box-sizing: border-box;
+
+  border: 1px solid #d8c5b8;
+  background: #fffdfb;
+  color: #211814;
+
+  outline: none;
+  font-size: 13px;
+  transition: 0.25s ease;
+}
+
+.tailor-field input::placeholder {
+  color: #b0a19a;
+}
+
+.tailor-field input:focus {
+  border-color: #c9a45c;
+  box-shadow: 0 0 0 2px rgba(201, 164, 92, 0.12);
+}
+
+/* SUBMIT */
+
+.tailor-submit {
+  width: 100%;
+  height: 48px;
+  margin-top: 6px;
+
+  border: 1px solid #c9a45c;
+  background: #4b1826;
+  color: #fff9f3;
+
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transition: 0.25s ease;
+}
+
+.tailor-submit:hover {
+  background: #7b2638;
+}
+
+/* BACK */
+
+.back-home {
+  display: block;
+  margin: 22px auto 0;
+
+  border: none;
+  background: transparent;
+  color: #806f66;
+
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.back-home:hover {
+  color: #7b2638;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .tailor-login-page {
+    padding: 20px 15px;
+  }
+
+  .tailor-login-card {
+    padding: 30px 22px;
+  }
+
+  .tailor-logo {
+    font-size: 25px;
+    letter-spacing: 4px;
+  }
+
+  .tailor-login-heading h1 {
+    font-size: 26px;
+  }
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 65px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+  color: #9a7a58;
+
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.password-toggle:hover {
+  color: #7b2638;
+}

@@ -1,0 +1,288 @@
+.login-selection {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(123, 38, 56, 0.55),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #211814,
+      #4b1826
+    );
+  color: #fff9f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-selection::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgba(201, 164, 92, 0.15);
+  border-radius: 50%;
+  right: -180px;
+  top: -160px;
+}
+
+.login-selection::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(184, 92, 114, 0.18);
+  border-radius: 50%;
+  left: -180px;
+  bottom: -160px;
+}
+
+.selection-overlay {
+  min-height: 100vh;
+  padding: 35px 7%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.selection-brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.selection-brand span {
+  color: #c9a45c;
+}
+
+.selection-content {
+  width: min(1150px, 100%);
+  margin: auto;
+  padding: 45px 0;
+}
+
+.selection-eyebrow {
+  color: #e2c98e;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin: 0 0 20px;
+}
+
+.selection-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+}
+
+.selection-content h1 span {
+  color: #d99aaa;
+  font-style: italic;
+}
+
+.selection-description {
+  max-width: 520px;
+  color: #d7c7c0;
+  line-height: 1.7;
+  font-size: 14px;
+  margin: 25px 0 35px;
+}
+
+
+/* =========================================
+   LOGIN OPTIONS
+========================================= */
+
+.login-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.login-option {
+  min-height: 250px;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid #69534d;
+  background: rgba(255, 249, 243, 0.06);
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.35s ease;
+}
+
+.login-option:hover {
+  transform: translateY(-7px);
+  border-color: #c9a45c;
+  background: rgba(255, 249, 243, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.admin-option:hover {
+  border-color: #b85c72;
+}
+
+.tailor-option:hover {
+  border-color: #c9a45c;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.option-icon {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #c9a45c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2c98e;
+  font-size: 22px;
+}
+
+.admin-option .option-icon {
+  border-color: #b85c72;
+  color: #d99aaa;
+}
+
+.tailor-option .option-icon {
+  border-color: #c9a45c;
+  color: #e2c98e;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.option-content {
+  margin-top: 25px;
+}
+
+.option-content p {
+  margin: 0 0 8px;
+  color: #c9a45c;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.admin-option .option-content p {
+  color: #d99aaa;
+}
+
+.tailor-option .option-content p {
+  color: #e2c98e;
+}
+
+.option-content h2 {
+  margin: 0 0 10px;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.option-content span {
+  display: block;
+  max-width: 310px;
+  color: #bca9a2;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.option-arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  color: #c9a45c;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.login-option:hover .option-arrow {
+  transform: translateX(7px);
+}
+
+
+/* =========================================
+   BACK HOME
+========================================= */
+
+.back-home {
+  align-self: flex-start;
+  margin-top: 30px;
+  background: transparent;
+  border: none;
+  color: #bca9a2;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 5px 0;
+}
+
+.back-home:hover {
+  color: #e2c98e;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.selection-footer {
+  text-align: center;
+  color: #75625b;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .selection-content {
+    padding: 45px 0;
+  }
+
+  .login-options {
+    grid-template-columns: 1fr;
+  }
+
+  .login-option {
+    min-height: 200px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .selection-overlay {
+    padding: 25px 5%;
+  }
+
+  .selection-content {
+    padding: 35px 0;
+  }
+
+  .selection-content h1 {
+    font-size: 45px;
+  }
+
+}

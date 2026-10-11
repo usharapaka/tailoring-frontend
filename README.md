@@ -2,13 +2,13 @@
 
 A modern web application designed to simplify tailoring services by connecting customers, tailors, and administrators through a single platform.
 
-## 📌 Project Overview
+## 1 Project Overview
 
 **STITCHORA** is a tailoring management platform that helps customers manage tailoring requirements and allows tailors to handle customer orders, measurements, appointments, and service availability. The platform provides a centralized interface for managing tailoring-related activities.
 
-## ✨ Key Features
+## 2 Key Features
 
-### 👤 Customer
+###  Customer
 - Customer registration and login
 - Customer profile and dashboard
 - Tailor discovery and availability status
@@ -17,19 +17,19 @@ A modern web application designed to simplify tailoring services by connecting c
 - Appointment management
 - Tailor ratings and reviews
 
-### 🧵 Tailor
+###  Tailor
 - Tailor dashboard
 - Availability status management
 - Customer order and appointment management
 - Customer review and rating visibility
 
-### 🛡️ Administrator
+###  Administrator
 - Administrative login
 - Access to the platform's administrative features
 
 *Feature availability depends on the implemented backend functionality and user permissions.*
 
-## 🛠️ Technology Stack
+## 3 Technology Stack
 
 | Technology | Purpose |
 |---|---|
@@ -43,7 +43,7 @@ A modern web application designed to simplify tailoring services by connecting c
 | Git & GitHub | Version control and source code hosting |
 | Vercel | Frontend deployment |
 
-## 🏗️ System Architecture
+## 4 System Architecture
 
 The application follows a frontend–backend architecture.
 
@@ -63,7 +63,7 @@ Customer / Tailor / Admin
         MySQL
 ```
 
-## ⚙️ Getting Started
+## 5 Getting Started
 
 ### Prerequisites
 
@@ -113,13 +113,13 @@ To preview the production build locally:
 npm run preview
 ```
 
-## 🔗 Live Demo
+## 6 Live Demo
 
 **Frontend:** https://tailoring-frontend-two.vercel.app
 
 The frontend is deployed on Vercel. Features requiring backend connectivity depend on the backend service and database being available and correctly configured.
 
-## 📂 Repository Structure
+## 7 Repository Structure
 
 ```text
 tailoring-frontend/
@@ -133,11 +133,11 @@ tailoring-frontend/
 └── README.md
 ```
 
-## 🎯 Project Objective
+## 8 Project Objective
 
 To provide a convenient and organized digital platform for tailoring services by simplifying customer interactions, measurement handling, order tracking, appointment management, and tailor availability.
 
-## 👩‍💻 Developer
+##  Developer
 
 **Rapaka Usha**  
 B.Tech – Electronics and Communication Engineering  

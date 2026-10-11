@@ -1,16 +1,146 @@
-# React + Vite
+# STITCHORA – Smart Tailoring Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application designed to simplify tailoring services by connecting customers, tailors, and administrators through a single platform.
 
-Currently, two official plugins are available:
+## 📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**STITCHORA** is a tailoring management platform that helps customers manage tailoring requirements and allows tailors to handle customer orders, measurements, appointments, and service availability. The platform provides a centralized interface for managing tailoring-related activities.
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👤 Customer
+- Customer registration and login
+- Customer profile and dashboard
+- Tailor discovery and availability status
+- Measurement management
+- Tailoring order management
+- Appointment management
+- Tailor ratings and reviews
 
-## Expanding the ESLint configuration
+### 🧵 Tailor
+- Tailor dashboard
+- Availability status management
+- Customer order and appointment management
+- Customer review and rating visibility
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛡️ Administrator
+- Administrative login
+- Access to the platform's administrative features
+
+*Feature availability depends on the implemented backend functionality and user permissions.*
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| React.js | Frontend user interface |
+| Vite | Development server and build tool |
+| JavaScript | Application logic |
+| CSS | Styling and responsive layouts |
+| Axios | HTTP communication with the backend |
+| Java & Spring Boot | Backend services |
+| MySQL | Database management |
+| Git & GitHub | Version control and source code hosting |
+| Vercel | Frontend deployment |
+
+## 🏗️ System Architecture
+
+The application follows a frontend–backend architecture.
+
+```text
+Customer / Tailor / Admin
+          |
+          v
+   React + Vite UI
+          |
+          v
+      Axios API
+          |
+          v
+   Spring Boot Backend
+          |
+          v
+        MySQL
+```
+
+## ⚙️ Getting Started
+
+### Prerequisites
+
+Install the following tools:
+
+- Node.js and npm
+- Git
+- Visual Studio Code (recommended)
+- Java JDK and Maven for running the backend
+- MySQL for the database
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/usharapaka/tailoring-frontend.git
+```
+
+### 2. Open the Project
+
+```bash
+cd tailoring-frontend
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal, usually `http://localhost:5173`.
+
+### 5. Build for Production
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 🔗 Live Demo
+
+**Frontend:** https://tailoring-frontend-two.vercel.app
+
+The frontend is deployed on Vercel. Features requiring backend connectivity depend on the backend service and database being available and correctly configured.
+
+## 📂 Repository Structure
+
+```text
+tailoring-frontend/
+├── public/
+├── src/
+├── .gitignore
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+## 🎯 Project Objective
+
+To provide a convenient and organized digital platform for tailoring services by simplifying customer interactions, measurement handling, order tracking, appointment management, and tailor availability.
+
+## 👩‍💻 Developer
+
+**Rapaka Usha**  
+B.Tech – Electronics and Communication Engineering  
+Anurag University
+
+GitHub: https://github.com/usharapaka
